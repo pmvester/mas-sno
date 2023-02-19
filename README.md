@@ -22,6 +22,7 @@ Attach a new storage volume to your VSI.
 ```zsh
 lsblk
 ```
+![lsblk](/images/lsblk.png)
 ```zsh
 sudo fdisk /dev/vdf
 ```
