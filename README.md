@@ -14,6 +14,7 @@ In `ansible/roles/create_sno_vm/defaults/main.yml` change `sno_vm_vcpus`from `8`
 ## Adding storage
 Attach a new storage volume to your VSI.
 ![vsi-attach.png](/images/vsi-attach.png)
+![vsi-storage.png](/images/vsi-storage.png)
 ## Installing LVM
 ## Installing MAS
 ```zsh
