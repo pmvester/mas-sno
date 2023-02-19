@@ -76,6 +76,16 @@ oc login --token=sha256~zeavQvAC0epuUD729-zJgrDJnGqciqJDO2s6ySxu5ug --server=htt
 ```zsh
 oc create -f namespace.yaml
 ```
+![lvm operator](/images/lvm-operator.png)
+![lvm operator install 1](/images/lvm-operator-install-1.png)
+![lvm operator install 2](/images/lvm-operator-install-2.png)
+![lvm cluster create](/images/lvm-cluster-create.png)
+```zsh
+oc get pods -n openshift-storage
+```
+![get pods](/images/get-pods.png)
+![storage classes](/images/storage-classes.png)
+
 ## Installing MAS
 ```zsh
 docker run -it --name spectrum --mount type=bind,source="$(pwd)",target=/opt/app-root/src/masdir --rm quay.io/ibmmas/cli
