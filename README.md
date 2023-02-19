@@ -13,7 +13,7 @@ In `ansible/roles/provision_kvm_host/defaults/main.yml` change `vsi_profile`from
 In `ansible/roles/create_sno_vm/defaults/main.yml` change `sno_vm_vcpus`from `8` to `24` and `sno_vm_ram_mb` from `32768` to `98304`.
 ## Adding storage
 Attach a new storage volume to your VSI.
-![vsi-attach.png]/images/vsi-attach.png
+![vsi-attach.png](/images/vsi-attach.png)
 ## Installing LVM
 ## Installing MAS
 ```zsh
