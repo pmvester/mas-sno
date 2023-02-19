@@ -9,6 +9,7 @@ docker run -it --name sno --mount type=bind,source="$(pwd)",target=/root/sno pmv
 ```zsh
 git clone https://github.com/IBM/sno-on-ibm-cloud-vpc-ansible.git
 ```
+In `ansible/roles/provision_kvm_host/defaults/main.yml` change `vsi_profile`from `bx2d-16x64` to `bx2d-32x128`.
 ## Adding storage
 ## Installing LVM
 ## Installing MAS
