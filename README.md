@@ -60,7 +60,10 @@ sudo virsh list
 sudo virsh attach-disk --domain alice-vm --source /data3tb/data3tb.qcow2 --subdriver qcow2 --target vdb
 ```
 ## Installing LVM
-Create `namespace.yaml`.
+```zsh
+oc login --token=<<token>> --server=https://api.alice.snomas.cloud:6443
+```
+Create a file named `namespace.yaml` with the following content.
 ```
 apiVersion: v1
 kind: Namespace
@@ -69,9 +72,6 @@ metadata:
     openshift.io/cluster-monitoring: "true"
   name: openshift-storage
 spec: {}
-```
-```zsh
-oc login --token=sha256~zeavQvAC0epuUD729-zJgrDJnGqciqJDO2s6ySxu5ug --server=https://api.alice.snomas.cloud:6443
 ```
 ```zsh
 oc create -f namespace.yaml
