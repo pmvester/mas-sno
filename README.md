@@ -90,3 +90,42 @@ oc get pods -n openshift-storage
 ```zsh
 docker run -it --name spectrum --mount type=bind,source="$(pwd)",target=/opt/app-root/src/masdir --rm quay.io/ibmmas/cli
 ```
+```
+# AAA_ENTITLEMENT_KEY must be defined first.
+export AAA_API_KEY=1TwD69GN4IYIBTGFALTyrSTbisUjegYMHBCOln9de3_O
+export AAA_ENTITLEMENT_KEY=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJQk0gTWFya2V0cGxhY2UiLCJpYXQiOjE2NDkwNjc2NzUsImp0aSI6IjQ0NDQ2Nzk3YTM4YjRhMWE4NDM3NDI2Yzg1ZTZiODcxIn0.rd4TorEjW8E51Oa-KphN5Mf_T0AX8NK4VV76UREz04c
+export CIS_APIKEY=$AAA_API_KEY
+export CIS_CRN=crn:v1:bluemix:public:internet-svcs:global:a/1153702d2118844328b480b82517e235:1bdff21f-dc86-4f74-9b6b-0719eff09920::
+export CIS_EMAIL=mikael.vester@se.ibm.com
+export CIS_SUBDOMAIN=alice
+export CPD_ENTITLEMENT_KEY=$AAA_ENTITLEMENT_KEY
+export CPD_PRODUCT_VERSION=4.5.2
+export DB2_INSTANCE_NAME=db2w-shared
+export DNS_PROVIDER=cis
+export GRAFANA_INSTANCE_STORAGE_CLASS=odf-lvm-vgmcg
+export IBMCLOUD_APIKEY=$AAA_API_KEY
+export IBMCLOUD_RESOURCEGROUP=sno-rg
+export IBM_ENTITLEMENT_KEY=$AAA_ENTITLEMENT_KEY
+export MAS_APPWS_COMPONENTS="base=latest"
+export MAS_APP_ID=manage
+export MAS_APP_SETTINGS_DEMODATA=true
+export MAS_CONFIG_DIR=/opt/app-root/src/masdir
+export MAS_DOMAIN=alice.imomax.org
+export MAS_ENTITLEMENT_KEY=$AAA_ENTITLEMENT_KEY
+export MAS_INSTANCE_ID=mas8
+export MAS_WORKSPACE_ID=masdev
+export MONGODB_STORAGE_CLASS=odf-lvm-vgmcg
+export PROMETHEUS_ALERTMGR_STORAGE_CLASS=odf-lvm-vgmcg
+export PROMETHEUS_STORAGE_CLASS=odf-lvm-vgmcg
+export SLS_ENTITLEMENT_KEY=$AAA_ENTITLEMENT_KEY
+export SLS_LICENSE_FILE=~/masdir/entitlement.lic
+export SLS_LICENSE_ID=46a7079eee48
+export SLS_MONGODB_CFG_FILE=~/masdir/mongo-mongoce.yml
+export SLS_STORAGE_CLASS=odf-lvm-vgmcg
+export UDS_CONTACT_EMAIL=mikael.vester@se.ibm.com
+export UDS_CONTACT_FIRSTNAME=Mikael
+export UDS_CONTACT_LASTNAME=Vester
+export UDS_STORAGE_CLASS=odf-lvm-vgmcg
+export UPGRADE_IMAGE_REGISTRY_STORAGE=true
+```
+docker run -it --name sno --mount type=bind,source="$(pwd)",target=/root/sno pmv/fedora-sno:0.4
