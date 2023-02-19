@@ -88,7 +88,7 @@ oc get pods -n openshift-storage
 
 ## Installing MAS
 ```zsh
-docker run -it --name spectrum --mount type=bind,source="$(pwd)",target=/opt/app-root/src/masdir --rm quay.io/ibmmas/cli
+docker run -it --name mas --mount type=bind,source="$(pwd)",target=/opt/app-root/src/masdir --rm quay.io/ibmmas/cli
 ```
 ```
 # AAA_ENTITLEMENT_KEY must be defined first.
@@ -128,4 +128,6 @@ export UDS_CONTACT_LASTNAME=Vester
 export UDS_STORAGE_CLASS=odf-lvm-vgmcg
 export UPGRADE_IMAGE_REGISTRY_STORAGE=true
 ```
-docker run -it --name sno --mount type=bind,source="$(pwd)",target=/root/sno pmv/fedora-sno:0.4
+```zsh
+ansible-playbook ibm.mas_devops.oneclick_core
+```
