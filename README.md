@@ -100,7 +100,9 @@ export CIS_EMAIL=mikael.vester@se.ibm.com
 export CIS_SUBDOMAIN=alice
 export CPD_ENTITLEMENT_KEY=$AAA_ENTITLEMENT_KEY
 export CPD_PRODUCT_VERSION=4.5.2
+export DB2_DATA_STORAGE_CLASS=odf-lvm-vgmcg
 export DB2_INSTANCE_NAME=db2w-shared
+export DB2_META_STORAGE_CLASS=odf-lvm-vgmcg
 export DNS_PROVIDER=cis
 export GRAFANA_INSTANCE_STORAGE_CLASS=odf-lvm-vgmcg
 export IBMCLOUD_APIKEY=$AAA_API_KEY
@@ -130,4 +132,7 @@ export UPGRADE_IMAGE_REGISTRY_STORAGE=true
 ```
 ```zsh
 ansible-playbook ibm.mas_devops.oneclick_core
+```
+```zsh
+ansible-playbook ibm.mas_devops.oneclick_add_manage
 ```
