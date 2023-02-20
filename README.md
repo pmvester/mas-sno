@@ -115,10 +115,10 @@ docker run -it --name mas --mount type=bind,source="$(pwd)",target=/opt/app-root
 Update `/etc/hosts` with the values found in `auth/alice.hosts` from the Installing SNO step.
 ```
 # AAA_ENTITLEMENT_KEY must be defined first.
-export AAA_API_KEY=1TwD69GN4IYIBTGFALTyrSTbisUjegYMHBCOln9de3_O
-export AAA_ENTITLEMENT_KEY=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJQk0gTWFya2V0cGxhY2UiLCJpYXQiOjE2NDkwNjc2NzUsImp0aSI6IjQ0NDQ2Nzk3YTM4YjRhMWE4NDM3NDI2Yzg1ZTZiODcxIn0.rd4TorEjW8E51Oa-KphN5Mf_T0AX8NK4VV76UREz04c
+export AAA_API_KEY=<<api key>>
+export AAA_ENTITLEMENT_KEY=<<entitlement key>>
 export CIS_APIKEY=$AAA_API_KEY
-export CIS_CRN=crn:v1:bluemix:public:internet-svcs:global:a/1153702d2118844328b480b82517e235:1bdff21f-dc86-4f74-9b6b-0719eff09920::
+export CIS_CRN=<<crn key>>
 export CIS_EMAIL=mikael.vester@se.ibm.com
 export CIS_SUBDOMAIN=alice
 export CPD_ENTITLEMENT_KEY=$AAA_ENTITLEMENT_KEY
