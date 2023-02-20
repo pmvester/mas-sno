@@ -31,10 +31,14 @@ sudo fdisk /dev/vdf
 sudo mkfs.xfs /dev/vdf1
 ```
 ```zsh
-sudo vi /etc/fstab
+sudo mkdir /data3tb
 ```
 ```zsh
-sudo mkdir /data3tb
+sudo vi /etc/fstab
+```
+add one line at the end of the file
+```
+/dev/vdf1 /data3tb xfs defaults 0 0
 ```
 ```zsh
 sudo mount /data3tb
