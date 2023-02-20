@@ -92,6 +92,22 @@ oc get pods -n openshift-storage
 ![get pods](/images/get-pods.png)
 ![storage classes](/images/storage-classes.png)
 
+## Configuring the registry
+
+```zsh
+oc patch config.imageregistry.operator.openshift.io/cluster --type=merge -p '{"spec":{"rolloutStrategy":"Recreate","replicas":1}}'
+```
+Create new 100G PVC type `File` named `image-registry-storage`.
+```zsh
+oc edit configs.imageregistry/cluster
+```
+Change `managementState`to `Managed` and update `storage` to:
+```
+storage:
+  pvc:
+    claim: image-registry-storage
+```
+
 ## Installing MAS
 ```zsh
 docker run -it --name mas --mount type=bind,source="$(pwd)",target=/opt/app-root/src/masdir --rm quay.io/ibmmas/cli
