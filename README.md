@@ -96,6 +96,7 @@ oc get pods -n openshift-storage
 ```zsh
 docker run -it --name mas --mount type=bind,source="$(pwd)",target=/opt/app-root/src/masdir --rm quay.io/ibmmas/cli
 ```
+Update `/etc/hosts` with the values found in `auth/alice.hosts` from the Installing SNO step.
 ```
 # AAA_ENTITLEMENT_KEY must be defined first.
 export AAA_API_KEY=<<api key>>
