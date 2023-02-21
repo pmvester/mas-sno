@@ -180,7 +180,7 @@ export UDS_STORAGE_CLASS=odf-lvm-vgmcg
 export UPGRADE_IMAGE_REGISTRY_STORAGE=true
 ```
 ```zsh
-oc login --token=<<token>> --server=https://api.atlas.imomax.org:6443
+oc login --token=<<token>> --server=https://api.alice.snomas.cloud:6443
 ```
 ```zsh
 ansible-playbook ibm.mas_devops.oneclick_core
