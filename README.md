@@ -2,6 +2,10 @@
 Maximo Application Suite (Manage) on Single Node OpenShift
 ## Resources
 - [Spin up a single-node Red Hat OpenShift cluster with one command](https://developer.ibm.com/tutorials/spin-up-a-single-node-openshift-cluster-with-one-command/)
+- [Add Storage to your KVM Linux Virtual Machine from the Command Line](https://www.youtube.com/watch?v=kjVXnhg92rw) (YouTube video)
+- [ODF at the Edge: LVMO, MCG on SNO](https://www.youtube.com/watch?v=JcykZYeSI2Q) (YouTube video)
+- [Creating a Directory-based Storage Pool with virsh](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/virtualization_administration_guide/sect-virtualization-storage_pools-creating-local_directories-virsh)
+- [Configuring the registry for bare metal](https://docs.openshift.com/container-platform/4.10/registry/configuring_registry_storage/configuring-registry-storage-baremetal.html)
 ## Installing SNO
 ```zsh
 docker run -it --name sno --mount type=bind,source="$(pwd)",target=/root/sno pmv/fedora-sno:0.4
@@ -18,7 +22,7 @@ In `ansible/roles/create_sno_vm/defaults/main.yml`
 
 ![group_vars/all](/images/group_vars-all.png)
 
-Performed the steps described in [Spin up a single-node Red Hat OpenShift cluster with one command](https://developer.ibm.com/tutorials/spin-up-a-single-node-openshift-cluster-with-one-command/).
+Perform the steps described in [Spin up a single-node Red Hat OpenShift cluster with one command](https://developer.ibm.com/tutorials/spin-up-a-single-node-openshift-cluster-with-one-command/).
 
 ## Adding storage
 Attach a new storage volume to your VSI.
