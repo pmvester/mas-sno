@@ -1,5 +1,5 @@
 # mas-sno
-Maximo Application Suite (Manage) on Single Node OpenShift
+Maximo Application Suite (Manage) on Single Node OpenShift. These are my personal notes and not intended to be a step by step instruction on how to perform an installation. However, the instructions contains enough information for a sufficiently experienced person to figure out how such an installation can be done.
 ## Resources
 - [Spin up a single-node Red Hat OpenShift cluster with one command](https://developer.ibm.com/tutorials/spin-up-a-single-node-openshift-cluster-with-one-command/)
 - [Add Storage to your KVM Linux Virtual Machine from the Command Line](https://www.youtube.com/watch?v=kjVXnhg92rw) (YouTube video)
