@@ -133,7 +133,7 @@ Update `/etc/hosts` with the values found in `auth/alice.hosts` from the Install
 ```zsh
 mkdir ~/masdir
 ```
-Copy your license file to `~/masdir/entitlement.lic` (`docker cp` is a simple way to copy files to a container).
+Copy your license file to `~/masdir/entitlement.lic` (`docker cp` is a simple way to copy files to a container unless mounting a local volume as in the example above).
 ```
 # AAA_ENTITLEMENT_KEY must be defined first.
 export AAA_API_KEY=<<api key>>
