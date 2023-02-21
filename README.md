@@ -114,7 +114,7 @@ oc get pods -n openshift-storage
 ```zsh
 oc patch config.imageregistry.operator.openshift.io/cluster --type=merge -p '{"spec":{"rolloutStrategy":"Recreate","replicas":1}}'
 ```
-![create pvc](/images/create-pvc.pvc)
+![create pvc](/images/create-pvc.png)
 ```zsh
 oc edit configs.imageregistry/cluster
 ```
