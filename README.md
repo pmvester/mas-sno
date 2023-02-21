@@ -26,6 +26,8 @@ In `ansible/roles/create_sno_vm/defaults/main.yml`
 
 Perform the steps described in [Spin up a single-node Red Hat OpenShift cluster with one command](https://developer.ibm.com/tutorials/spin-up-a-single-node-openshift-cluster-with-one-command/).
 
+Update `/etc/hosts` with the values found in `auth/alice.hosts`.
+
 ## Adding storage
 Attach a new storage volume to your VSI.
 ![vsi-attach.png](/images/vsi-attach.png)
