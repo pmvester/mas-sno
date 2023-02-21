@@ -114,7 +114,7 @@ oc get pods -n openshift-storage
 ```zsh
 oc patch config.imageregistry.operator.openshift.io/cluster --type=merge -p '{"spec":{"rolloutStrategy":"Recreate","replicas":1}}'
 ```
-Create new 100G PVC type `Filesystem` access mode `RWO` named `image-registry-storage`.
+![create pvc](/images/create-pvc.pvc)
 ```zsh
 oc edit configs.imageregistry/cluster
 ```
