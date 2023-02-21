@@ -15,6 +15,11 @@ In `ansible/roles/provision_kvm_host/defaults/main.yml`
 In `ansible/roles/create_sno_vm/defaults/main.yml` 
 - change `sno_vm_vcpus`from `8` to `24`
 - change `sno_vm_ram_mb` from `32768` to `98304`.
+
+![group_vars/all](/images/group_vars-all.png)
+
+Performed the steps described in [Spin up a single-node Red Hat OpenShift cluster with one command](https://developer.ibm.com/tutorials/spin-up-a-single-node-openshift-cluster-with-one-command/).
+
 ## Adding storage
 Attach a new storage volume to your VSI.
 ![vsi-attach.png](/images/vsi-attach.png)
