@@ -7,9 +7,11 @@ Maximo Application Suite (Manage) on Single Node OpenShift
 - [Creating a Directory-based Storage Pool with virsh](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/virtualization_administration_guide/sect-virtualization-storage_pools-creating-local_directories-virsh)
 - [Configuring the registry for bare metal](https://docs.openshift.com/container-platform/4.10/registry/configuring_registry_storage/configuring-registry-storage-baremetal.html)
 ## Installing SNO
+<!--
 ```zsh
 docker run -it --name sno --mount type=bind,source="$(pwd)",target=/root/sno pmv/fedora-sno:0.4
 ```
+-->
 ```zsh
 git clone https://github.com/IBM/sno-on-ibm-cloud-vpc-ansible.git
 ```
