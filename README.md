@@ -73,7 +73,7 @@ sudo virsh pool-info data2tb
 ```
 ![virsh pool-info](/images/virsh-pool-info.png)
 ```zsh
-sudo virsh vol-create-as --pool data2tb --name data2tb.qcow2 --format qcow2 --capacity 2910G
+sudo virsh vol-create-as --pool data2tb --name data2tb.qcow2 --format qcow2 --capacity 1940G
 ```
 ```zsh
 sudo virsh list
