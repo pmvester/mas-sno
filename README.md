@@ -155,7 +155,7 @@ export AAA_ENTITLEMENT_KEY=<<entitlement key>>
 export CIS_APIKEY=$AAA_API_KEY
 export CIS_CRN=<<crn key>>
 export CIS_EMAIL=mikael.vester@se.ibm.com
-export CIS_SUBDOMAIN=atlas
+export CIS_SUBDOMAIN=atlas-mas
 export CPD_ENTITLEMENT_KEY=$AAA_ENTITLEMENT_KEY
 export CPD_PRODUCT_VERSION=4.5.2
 export DB2_BACKUP_STORAGE_ACCESSMODE=ReadWriteOnce
@@ -175,7 +175,7 @@ export MAS_APPWS_COMPONENTS="base=latest"
 export MAS_APP_ID=manage
 export MAS_APP_SETTINGS_DEMODATA=true
 export MAS_CONFIG_DIR=/opt/app-root/src/masdir
-export MAS_DOMAIN=atlas.imomax.org
+export MAS_DOMAIN=atlas-mas.imomax.org
 export MAS_ENTITLEMENT_KEY=$AAA_ENTITLEMENT_KEY
 export MAS_INSTANCE_ID=mas8
 export MAS_WORKSPACE_ID=masdev
@@ -194,7 +194,7 @@ export UDS_STORAGE_CLASS=odf-lvm-vgmcg
 export UPGRADE_IMAGE_REGISTRY_STORAGE=true
 ```
 ```zsh
-oc login --token=<<token>> --server=https://api.atals-sno.imomax.org:6443
+oc login --token=<<token>> --server=https://api.atlas-sno.imomax.org:6443
 ```
 ```zsh
 ansible-playbook ibm.mas_devops.oneclick_core
