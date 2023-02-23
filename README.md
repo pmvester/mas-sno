@@ -84,7 +84,7 @@ sudo virsh attach-disk --domain atlas-sno-vm --source /data2tb/data2tb.qcow2 --s
 ```
 ## Installing LVM
 ```zsh
-oc login --token=<<token>> --server=https://api.alice.snomas.cloud:6443
+oc login --token=<<token from gui>> --server=https://api.atlas-sno.imomax.org:6443
 ```
 Create a file named `namespace.yaml` with the following content.
 ```
@@ -129,7 +129,7 @@ storage:
 ```zsh
 docker run -it --name mas --mount type=bind,source="$(pwd)",target=/opt/app-root/src/masdir --rm quay.io/ibmmas/cli
 ```
-Update `/etc/hosts` with the values found in `auth/alice.hosts` from the Installing SNO step.
+Update `/etc/hosts` with the values found in `auth/atlas-sno.hosts` from the Installing SNO step.
 ```zsh
 mkdir ~/masdir
 ```
@@ -141,7 +141,7 @@ export AAA_ENTITLEMENT_KEY=<<entitlement key>>
 export CIS_APIKEY=$AAA_API_KEY
 export CIS_CRN=<<crn key>>
 export CIS_EMAIL=mikael.vester@se.ibm.com
-export CIS_SUBDOMAIN=alice
+export CIS_SUBDOMAIN=atlas
 export CPD_ENTITLEMENT_KEY=$AAA_ENTITLEMENT_KEY
 export CPD_PRODUCT_VERSION=4.5.2
 export DB2_BACKUP_STORAGE_ACCESSMODE=ReadWriteOnce
@@ -161,7 +161,7 @@ export MAS_APPWS_COMPONENTS="base=latest"
 export MAS_APP_ID=manage
 export MAS_APP_SETTINGS_DEMODATA=true
 export MAS_CONFIG_DIR=/opt/app-root/src/masdir
-export MAS_DOMAIN=alice.imomax.org
+export MAS_DOMAIN=atlas.imomax.org
 export MAS_ENTITLEMENT_KEY=$AAA_ENTITLEMENT_KEY
 export MAS_INSTANCE_ID=mas8
 export MAS_WORKSPACE_ID=masdev
@@ -180,7 +180,7 @@ export UDS_STORAGE_CLASS=odf-lvm-vgmcg
 export UPGRADE_IMAGE_REGISTRY_STORAGE=true
 ```
 ```zsh
-oc login --token=<<token>> --server=https://api.alice.snomas.cloud:6443
+oc login --token=<<token>> --server=https://api.atals-sno.imomax.org:6443
 ```
 ```zsh
 ansible-playbook ibm.mas_devops.oneclick_core
