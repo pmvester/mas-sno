@@ -44,43 +44,43 @@ sudo fdisk /dev/vdf
 sudo mkfs.xfs /dev/vdf1
 ```
 ```zsh
-sudo mkdir /data3tb
+sudo mkdir /data2tb
 ```
 ```zsh
 sudo vi /etc/fstab
 ```
 add one line at the end of the file
 ```
-/dev/vdf1 /data3tb xfs defaults 0 0
+/dev/vdf1 /data2tb xfs defaults 0 0
 ```
 ```zsh
-sudo mount /data3tb
+sudo mount /data2tb
 ```
 ```zsh
 sudo virsh pool-list --all
 ```
 ```zsh
-sudo virsh pool-define-as data3tb dir - - - - "/data3tb"
+sudo virsh pool-define-as data2tb dir - - - - "/data2tb"
 ```
 ```zsh
-sudo virsh pool-start data3tb
+sudo virsh pool-start data2tb
 ```
 ```zsh
-sudo virsh pool-autostart data3tb
+sudo virsh pool-autostart data2tb
 ```
 ```zsh
-sudo virsh pool-info data3tb
+sudo virsh pool-info data2tb
 ```
 ![virsh pool-info](/images/virsh-pool-info.png)
 ```zsh
-sudo virsh vol-create-as --pool data3tb --name data3tb.qcow2 --format qcow2 --capacity 2910G
+sudo virsh vol-create-as --pool data2tb --name data2tb.qcow2 --format qcow2 --capacity 2910G
 ```
 ```zsh
 sudo virsh list
 ```
 ![virsh list](/images/virsh-list.png)
 ```zsh
-sudo virsh attach-disk --domain alice-vm --source /data3tb/data3tb.qcow2 --subdriver qcow2 --target vdb
+sudo virsh attach-disk --domain alice-vm --source /data2tb/data2tb.qcow2 --subdriver qcow2 --target vdb
 ```
 ## Installing LVM
 ```zsh
