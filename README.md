@@ -80,7 +80,7 @@ sudo virsh list
 ```
 ![virsh list](/images/virsh-list.png)
 ```zsh
-sudo virsh attach-disk --domain alice-vm --source /data2tb/data2tb.qcow2 --subdriver qcow2 --target vdb
+sudo virsh attach-disk --domain atlas-sno-vm --source /data2tb/data2tb.qcow2 --subdriver qcow2 --target vdb
 ```
 ## Installing LVM
 ```zsh
