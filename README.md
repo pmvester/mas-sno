@@ -32,15 +32,13 @@ name_prefix: "atlas"
 zone: "eu-de-1"
 region: "eu-de"
 resource_group_name: "sno-rg"
-sno_domain_name: "imomax.org"
-sno_cluster_name: "atlas-sno"
+sno_domain_name: "local.cloud"
+sno_cluster_name: "atlas"
 setup_vsi_gui: false
 sno_version: "4.10"
 ```
 
 Perform the steps described in [Spin up a single-node Red Hat OpenShift cluster with one command](https://developer.ibm.com/tutorials/spin-up-a-single-node-openshift-cluster-with-one-command/).
-
-Update `/etc/hosts` with the values found in `auth/alice.hosts`.
 
 ## Adding storage
 Attach a new storage volume to your VSI.
@@ -143,7 +141,7 @@ storage:
 ```zsh
 docker run -it --name mas --mount type=bind,source="$(pwd)",target=/opt/app-root/src/masdir --rm quay.io/ibmmas/cli
 ```
-Update `/etc/hosts` with the values found in `auth/atlas-sno.hosts` from the Installing SNO step.
+Update `/etc/hosts` with the values found in `auth/atlas.hosts` from the Installing SNO step.
 ```zsh
 mkdir ~/masdir
 ```
@@ -155,7 +153,7 @@ export AAA_ENTITLEMENT_KEY=<<entitlement key>>
 export CIS_APIKEY=$AAA_API_KEY
 export CIS_CRN=<<crn key>>
 export CIS_EMAIL=mikael.vester@se.ibm.com
-export CIS_SUBDOMAIN=atlas-mas
+export CIS_SUBDOMAIN=atlas
 export CPD_ENTITLEMENT_KEY=$AAA_ENTITLEMENT_KEY
 export CPD_PRODUCT_VERSION=4.5.2
 export DB2_BACKUP_STORAGE_ACCESSMODE=ReadWriteOnce
@@ -175,7 +173,7 @@ export MAS_APPWS_COMPONENTS="base=latest"
 export MAS_APP_ID=manage
 export MAS_APP_SETTINGS_DEMODATA=true
 export MAS_CONFIG_DIR=/opt/app-root/src/masdir
-export MAS_DOMAIN=atlas-mas.imomax.org
+export MAS_DOMAIN=atlas.imomax.org
 export MAS_ENTITLEMENT_KEY=$AAA_ENTITLEMENT_KEY
 export MAS_INSTANCE_ID=mas8
 export MAS_WORKSPACE_ID=masdev
