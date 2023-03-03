@@ -126,6 +126,7 @@ oc get pods -n openshift-storage
 ```zsh
 oc patch config.imageregistry.operator.openshift.io/cluster --type=merge -p '{"spec":{"rolloutStrategy":"Recreate","replicas":1}}'
 ```
+In the `openshift-image-registry` project, create a new PVC named `image-registry-storage`.
 ![create pvc](/images/create-pvc.png)
 ```zsh
 oc edit configs.imageregistry/cluster
@@ -134,7 +135,7 @@ Change `managementState`to `Managed` and update `storage` to:
 ```
 storage:
   pvc:
-    claim: image-registry-storage
+    claim:
 ```
 
 ## Installing MAS
