@@ -33,7 +33,7 @@ zone: "eu-de-1"
 region: "eu-de"
 resource_group_name: "sno-rg"
 sno_domain_name: "local.cloud"
-sno_cluster_name: "atlas"
+sno_cluster_name: "atlas-sno"
 setup_vsi_gui: false
 sno_version: "4.10"
 ```
