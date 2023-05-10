@@ -1,5 +1,5 @@
 # mas-sno
-Maximo Application Suite (Manage) on Single Node OpenShift in IBM Virtual Private Cloud. These are my personal notes and not intended to be a detailed step by step instruction on how to perform an installation. Some information is implicit e.g. how to logon to the KVM host (that can be found in the "Spin up a single-node..." document). However, I think the instructions contain enough information for a sufficiently experienced person to figure out how an installation can be done.
+Maximo Application Suite (Manage) on Single Node OpenShift in IBM Cloud Private. These are my personal notes and not intended to be a detailed step by step instruction on how to perform an installation. Some information is implicit e.g. how to logon to the KVM host (that can be found in the "Spin up a single-node..." document). However, I think the instructions contain enough information for a sufficiently experienced person to figure out how an installation can be done.
 ## Resources
 - [Spin up a single-node Red Hat OpenShift cluster with one command](https://developer.ibm.com/tutorials/spin-up-a-single-node-openshift-cluster-with-one-command/)
 - [Add Storage to your KVM Linux Virtual Machine from the Command Line](https://www.youtube.com/watch?v=kjVXnhg92rw) (YouTube video)
